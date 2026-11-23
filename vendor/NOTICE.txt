@@ -1,0 +1,26 @@
+Pep/8 Lab — browser implementation and learning IDE.
+Copyright (C) 2026  최규하 (Choi Gyuha), Soongsil University, Global School of Media
+
+This is a modified work based on Pep/8 by J. Stanley Warford and contributors,
+https://github.com/StanWarford/pep8
+Copyright (C) 2009  J. Stanley Warford, Pepperdine University
+
+Modifications (November 2026):
+- engine.js and session.js are JavaScript ports of the upstream C++ sources
+  (asm.cpp, code.cpp, sim.cpp, pep.cpp, cpupane.cpp, mainwindow.cpp,
+  objectcodepane.cpp, assemblerlistingpane.cpp), adapted to run in a browser.
+- Web-only limits were added: runs pause every 1,000,000 instructions and
+  output stops at 200,000 characters.
+- vendor/pep8os.pep is the Pep/8 Operating System (2004/08/30), included unmodified.
+- The user interface (index.html, app.js, layout.js, editor.js, examples.js,
+  style.css, layout.css) is new code written for this project.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. It is distributed WITHOUT ANY WARRANTY; see PEP8-LICENSE.txt for the
+full license text.
+
+All application source and the OS source are served unminified.
+Official project: https://computersystemsbook.com/4th-edition/pep8/
+This is not an official Pep/8 release.

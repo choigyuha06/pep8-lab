@@ -1,0 +1,27 @@
+#workspace{height:auto;min-height:650px;grid-template-columns:minmax(240px,var(--column-0,1.8fr)) 10px minmax(240px,var(--column-1,1fr)) 10px minmax(240px,var(--column-2,.88fr));gap:0;align-items:start}
+.left-column,.middle-column{display:flex;flex-direction:column;gap:12px;min-width:0}
+.pane{position:relative;flex:none;padding-bottom:10px;min-height:120px}
+.cpu-pane{overflow:auto}
+.pane-head{position:relative;min-height:39px;height:auto;flex-wrap:wrap;gap:4px;padding-top:3px;padding-bottom:3px}
+.pane-head .tabs{min-height:33px;flex-shrink:0;gap:12px}
+.pane-head .tabs button{min-height:33px}
+.font-settings{margin-left:auto;flex-shrink:0;border:1px solid #8199b8!important;border-radius:4px!important;font-weight:600!important}
+.panel-resizer{height:10px;position:absolute;bottom:0;left:0;right:0;background:#bac9dc;cursor:row-resize;touch-action:none;z-index:2;border-top:1px solid #8195af}
+.panel-resizer:after{content:'';display:block;width:34px;height:3px;border-radius:2px;background:#526d90;margin:3px auto}
+.cpu-pane .panel-resizer{position:sticky;margin-top:6px;margin-bottom:-10px;flex-shrink:0}
+.column-resizer{height:100%;min-height:650px;align-self:stretch;cursor:col-resize;touch-action:none;position:relative}
+.column-resizer:after{content:'';position:absolute;top:35%;left:3px;width:4px;height:45px;background:#7189a8;border-radius:3px}
+.panel-resizer:hover,.panel-resizer.dragging,.column-resizer:hover,.column-resizer.dragging{background:#9eb6d5}
+.panel-resizer:focus-visible,.column-resizer:focus-visible{outline:2px solid #2d54a7;outline-offset:-2px}
+.appearance-dialog{width:390px}.appearance-close{float:right}.appearance-dialog label{display:flex;gap:12px;align-items:center}.appearance-dialog select{padding:8px;max-width:260px}.font-adjust{display:flex;gap:10px;align-items:center;margin:20px 0}.font-adjust input{width:70px;padding:8px}.appearance-dialog p{color:#536985;font-size:11px}
+#workspace.no-memory{grid-template-columns:minmax(240px,var(--column-0)) 10px minmax(240px,var(--column-1))!important}.no-memory .col-1{display:none}
+#workspace.no-cpu{grid-template-columns:minmax(240px,var(--column-0)) 10px minmax(240px,var(--column-2))!important}#workspace.no-cpu.no-memory{grid-template-columns:minmax(240px,1fr)!important}#workspace>.memory-pane{grid-column:auto}.no-cpu .col-0{display:none}.no-cpu.no-memory .column-resizer{display:none}
+@media(max-width:1200px){#memoryDump{max-height:none}}
+@media(max-width:1000px){#workspace,#workspace.no-memory,#workspace.no-cpu{display:flex;flex-direction:column;gap:12px}.left-column,.middle-column,.memory-pane{width:100%}.column-resizer{display:none}.no-cpu .middle-column,.no-memory .memory-pane{display:none}#memoryDump{max-height:none}.memory-controls,.memory-pagination,.memory-edit{flex-shrink:0}}
+
+.cpu-pane{display:flex;flex-direction:column;overflow:hidden}.cpu-body{flex:1;min-height:0;overflow:auto}.cpu-pane .panel-resizer{position:absolute;margin:0}
+
+/* Wide screens: the app fills the window and never scrolls; panels share each column by ratio. */
+@media(min-width:1001px){html,body{height:100%;overflow:hidden}body{display:flex;flex-direction:column}body>header,body>.toolbar,body>#error,body>footer{flex:none}#workspace{flex:1;min-height:0;height:auto;grid-template-rows:minmax(0,1fr);align-items:stretch;padding-bottom:10px}.left-column,.middle-column{min-height:0;overflow:hidden}.left-column>.pane,.middle-column>.pane{min-height:0}.memory-pane{min-height:0}.column-resizer{min-height:0}.left-column>.pane:last-child>.panel-resizer,.middle-column>.pane:last-child>.panel-resizer,.memory-pane>.panel-resizer{display:none}}
+/* Status bar stays on the bottom edge even when narrow screens scroll. */
+footer{position:sticky;bottom:0;z-index:5}
