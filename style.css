@@ -55,3 +55,5 @@ footer b,footer button,#osStatus{color:#415a7c}
 header{height:40px;padding:0 10px;gap:4px}.brand-icon{width:24px;height:24px;font-size:14px;letter-spacing:-2px;border-radius:6px;padding-right:2px}.brand-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}header .menubar{height:auto;padding:0;margin-left:2px;border:0;background:none;flex:1;min-width:0}header .menu>summary{padding:6px 10px}header .menu>div{top:31px}.brand b{font-size:15px}@media(max-width:720px){header{height:40px;padding:0 8px}header .menu>div{top:40px}}
 /* Official Pep/8 link sits a little in from the right edge. */
 .header-right{margin-right:14px}
+/* Logo image (same artwork as the tab icon). */
+.brand-logo{display:block;width:24px;height:24px}
