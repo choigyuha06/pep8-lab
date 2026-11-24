@@ -11,8 +11,6 @@
 
 ## 구조
 
-빌드 단계가 없는 정적 사이트입니다. 폴더를 그대로 웹 서버에 올리면 됩니다.
-
 | 파일 | 역할 |
 |---|---|
 | `engine.js` | 어셈블러, Object Code 형식, Listing, CPU 시뮬레이터 |
@@ -21,20 +19,6 @@
 | `layout.js`, `layout.css`, `editor.js` | 패널 크기 조절, 글자 크기, 편집기 탭 |
 | `examples.js` | 예제 프로그램 |
 | `vendor/pep8os.pep` | 공식 Pep/8 운영체제 (원본 그대로) |
-
-로컬에서 실행하려면 ES 모듈 때문에 웹 서버가 필요합니다.
-
-```bash
-python3 -m http.server 8000
-```
-
-## 공식 동작 검사
-
-공식 Pep/8과 같은 결과가 나오는지 55가지 경우를 확인합니다.
-
-```bash
-node tests/official-check.mjs
-```
 
 ## 웹 전용 한도
 
